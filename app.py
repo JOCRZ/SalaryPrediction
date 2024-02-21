@@ -4,7 +4,7 @@ import pandas as pd
 import pickle
 
 
-
+@st.cache(allow_output_mutation=True)
 model=pickle.load(open('model.pkl','rb'))
 data = pd.read_csv('data//data.csv')
 st.title("Salary Prediction")
